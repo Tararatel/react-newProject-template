@@ -19,7 +19,10 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
     "preview": "vite preview",
     "prepare": "husky",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "commit": "cz",
+    "type-check": "tsc --noEmit -p tsconfig.app.json",
+    "type-check:staged": "node scripts/check-types.js"
   },
   "config": {
     "commitizen": {
@@ -31,24 +34,26 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^20.0.0",
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.4",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
+    "commitizen": "^4.3.1",
+    "commitlint": "^20.1.0",
+    "cz-git": "^1.12.0",
     "eslint": "^9.39.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
-    "prettier": "^3.6.2",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
-    "commitlint": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
-    "cz-git": "^1.12.0"
+    "prettier": "^3.6.2",
+    "tsc-files": "^1.1.4",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.2"
   }
 }
