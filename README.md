@@ -14,7 +14,7 @@
 1. Клонируйте репозиторий:
 
    ```bash
-   git clone git@github.com:Tararatel/react-newProject-template.git
+   npx degit Tararatel/react-newProject-template.git
    ```
 
 2. Установите зависимости:
